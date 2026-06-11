@@ -3,7 +3,7 @@
 A personal portfolio website built with HTML, CSS, and JavaScript.
 
 ## Live Site
-🔗 [View Portfolio](https://portfolionisrinamasyitah.netlify.app)
+ [View Portfolio](https://portfolionisrinamasyitah.netlify.app)
 
 ## About
 Portfolio of Nisrina Masyitah Mohd Nor Zaidi — Cybersecurity undergraduate at Multimedia University, full-stack developer, and security enthusiast.
@@ -23,4 +23,4 @@ Portfolio of Nisrina Masyitah Mohd Nor Zaidi — Cybersecurity undergraduate at 
 - Contact
 
 ## Contact
-📧 nisrinamasyitah@gmail.com
+nisrinamasyitah@gmail.com
