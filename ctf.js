@@ -27,7 +27,6 @@ window.scrollTo(0, 0);
         done = true;
         intro.classList.add('gone');
         document.body.classList.remove('lock');
-        try { sessionStorage.setItem('nm-ctf-intro', '1'); } catch (e) {}
         startRole();
     }
 
@@ -40,9 +39,7 @@ window.scrollTo(0, 0);
         setTimeout(finish, 2200);
     }
 
-    var seen = false;
-    try { seen = sessionStorage.getItem('nm-ctf-intro') === '1'; } catch (e) {}
-    if (seen || reduce) {
+    if (reduce) {
         intro.style.display = 'none';
         done = true;
         startRole();
