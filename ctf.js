@@ -7,10 +7,6 @@ window.scrollTo(0, 0);
     'use strict';
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // ─── flag fragment [2/3] lives in the console ──
-    console.log('%c[+] flag fragment [2/3]: by_d3s1gn', 'color:#4af626;font:bold 14px monospace;background:#000;padding:6px 10px;');
-    console.log('%cnice — you opened the console. hiring managers who read this: hi 👋', 'color:#9db3a1;font:12px monospace;');
-
     // ─── intro breach sequence ────────────────────
     var intro = document.getElementById('intro');
     var log = document.getElementById('intro-log');
@@ -78,7 +74,7 @@ window.scrollTo(0, 0);
     function startRole() {
         if (roleStarted) return;
         roleStarted = true;
-        var roles = ['Cybersecurity Undergraduate', 'Full-Stack Developer', 'CTF Player', 'Security Enthusiast', 'Software Engineer'];
+        var roles = ['Cybersecurity Undergraduate', 'Full-Stack Developer', 'Security Enthusiast', 'Web Developer', 'Software Engineer'];
         var el = document.getElementById('role');
         if (reduce) { el.textContent = roles[0]; return; }
         var r = 0, i = 0, del = false;
@@ -159,37 +155,4 @@ window.scrollTo(0, 0);
     document.getElementById('burger').addEventListener('click', function () { nav.classList.toggle('open'); });
     nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') nav.classList.remove('open'); });
 
-    // ─── flag submission (checked by SHA-256 hash) ─
-    var HASH = 'deac77a08efe328e961f608df9253979e2a2f43794036a80b9ff970bcb637f00';
-    var form = document.getElementById('flag-form');
-    var input = document.getElementById('flag-in');
-    var result = document.getElementById('flag-result');
-    var counter = document.getElementById('flag-count');
-
-    function sha256(str) {
-        if (!(window.crypto && crypto.subtle)) return Promise.resolve(null);
-        return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
-            return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
-        });
-    }
-    function win() {
-        result.className = 'result good';
-        result.textContent = '[+] FLAG ACCEPTED — well done, hacker.\nsend me the flag through the contact form below 😉';
-        form.classList.add('won');
-        counter.classList.add('won');
-        counter.innerHTML = '<i class="fas fa-flag"></i> 1/1';
-        try { localStorage.setItem('nm-ctf-solved', '1'); } catch (e) {}
-    }
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var v = input.value.trim();
-        if (!v) return;
-        sha256(v).then(function (h) {
-            if (h === HASH) { win(); return; }
-            result.className = 'result bad';
-            result.textContent = /^NM\{.*\}$/.test(v) ? '[-] wrong flag. check you have all 3 fragments.' : '[-] invalid format. flags look like NM{...}';
-            form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake');
-        });
-    });
-    try { if (localStorage.getItem('nm-ctf-solved') === '1') win(); } catch (e) {}
 })();

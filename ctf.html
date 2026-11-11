@@ -3,20 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nisrina Masyitah — Capture the Flag</title>
-    <meta name="description" content="Nisrina Masyitah — Cybersecurity & Full-Stack Developer. Find the hidden flag.">
+    <title>Nisrina Masyitah — Cybersecurity & Full-Stack Developer</title>
+    <meta name="description" content="Nisrina Masyitah — Cybersecurity undergraduate and full-stack developer based in Cyberjaya, Malaysia.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="ctf.css">
     <link rel="icon" href="image/N.ico">
 </head>
 <body>
-
-<!--
-    ┌──────────────────────────────────────────┐
-    │  nice, you checked the source.           │
-    │  flag fragment [1/3]:  NM{s3cur3_        │
-    └──────────────────────────────────────────┘
--->
 
 <!-- ─── breach intro ─────────────────────────── -->
 <div id="intro" aria-hidden="true">
@@ -24,7 +17,7 @@
     <div id="intro-title">
         <p class="it-small">[+] ACCESS GRANTED</p>
         <h1 class="glitch" data-text="NISRINA MASYITAH">NISRINA MASYITAH</h1>
-        <p class="it-sub">cybersecurity // full-stack // ctf player</p>
+        <p class="it-sub">cybersecurity // full-stack developer</p>
         <p class="it-enter">press <b>ENTER</b> or click to continue</p>
     </div>
     <button class="skip" id="skip">skip intro <i class="fas fa-forward"></i></button>
@@ -41,11 +34,9 @@
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#flag">CTF</a>
             <a href="#contact">Contact</a>
         </nav>
         <div class="hdr-right">
-            <span class="flag-count" id="flag-count"><i class="fas fa-flag"></i> 0/1</span>
             <button class="burger" id="burger" aria-label="Menu"><i class="fas fa-bars"></i></button>
         </div>
     </div>
@@ -62,7 +53,7 @@
             <p class="prompt"><span>root@nisrina:~#</span> cat welcome.txt</p>
             <h1 class="hero-name"><span class="glitch" data-text="Nisrina Masyitah">Nisrina Masyitah</span><span class="g">Mohd Nor Zaidi</span></h1>
             <p class="hero-role">&gt; <span id="role"></span><i class="cur">█</i></p>
-            <p class="hero-lead">Cybersecurity undergraduate at Multimedia University. I build secure full-stack apps and break things in CTFs.</p>
+            <p class="hero-lead">Cybersecurity undergraduate at Multimedia University. I build secure, real-world full-stack applications — from e-commerce platforms to NLP-powered systems.</p>
             <div class="btns">
                 <a href="#contact" class="btn btn-p"><i class="fas fa-paper-plane"></i> Hire me</a>
                 <a href="cvNM.pdf" target="_blank" class="btn btn-g"><i class="fas fa-download"></i> Download CV</a>
@@ -81,10 +72,10 @@
                 <img src="image/homepagepicture.jpg?v=2" alt="Nisrina Masyitah">
                 <div class="hp-scan"></div>
             </div>
-            <div class="hp-bottom"><i class="fas fa-flag"></i> hidden flag inside → <a href="#flag">find&nbsp;it</a></div>
+            <div class="hp-bottom"><i class="fas fa-shield-alt"></i> cybersecurity // full-stack</div>
         </div>
     </div>
-    <a href="#about" class="scroll-hint">scroll to begin <i class="fas fa-chevron-down"></i></a>
+    <a href="#about" class="scroll-hint">scroll down <i class="fas fa-chevron-down"></i></a>
 </section>
 
 <!-- ─── level 01: about ──────────────────────── -->
@@ -177,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <p class="cmd"><span>root@nisrina:~#</span> cat ctf_history.log</p>
+            <p class="cmd"><span>root@nisrina:~#</span> cat activities.log</p>
             <div class="xp">
                 <div class="xp-row">
                     <span class="xp-date">2026</span>
@@ -285,47 +276,11 @@
     </div>
 </section>
 
-<!-- ─── level 06: capture the flag ───────────── -->
-<section class="level" id="flag">
-    <div class="wrap">
-        <div class="lvl-head">
-            <span class="lvl-no">LEVEL 06</span>
-            <h2 data-decrypt>capture_the_flag</h2>
-            <span class="lvl-state"><i class="fas fa-lock"></i> <em>LOCKED</em></span>
-        </div>
-        <div class="lvl-bar"><i></i></div>
-        <div class="lvl-body ctf">
-            <aside class="brief">
-                <div class="brief-head"><i class="fas fa-crosshairs"></i> MISSION BRIEF</div>
-                <div class="brief-body">
-                    <p>A flag in the format <code>NM{...}</code> is hidden on this page, split into <b>3 fragments</b>.</p>
-                    <p>Collect all the fragments, put them together, then submit the full flag below.</p>
-                    <p class="brief-diff">difficulty: <span>★★☆☆☆</span> &nbsp;·&nbsp; reward: bragging rights</p>
-                </div>
-            </aside>
-            <div class="hints">
-                <p class="cmd"><span>root@nisrina:~#</span> cat hints.txt</p>
-                <details><summary>hint 1 — fragment [1/3]</summary><p>Developers leave notes where users don't look. Try <b>View Page Source</b> (Ctrl/Cmd + U).</p></details>
-                <details><summary>hint 2 — fragment [2/3]</summary><p>Some messages are only for those who open the <b>browser console</b> (F12 → Console).</p></details>
-                <details><summary>hint 3 — fragment [3/3]</summary><p>Not everything dark is empty. <b>Highlight</b> the blank line at the very bottom of this page.</p></details>
-            </div>
-            <form class="submit" id="flag-form" autocomplete="off">
-                <label for="flag-in">submit flag</label>
-                <div class="submit-row">
-                    <input id="flag-in" type="text" placeholder="NM{...}" spellcheck="false">
-                    <button type="submit" class="btn btn-p"><i class="fas fa-flag"></i> Submit</button>
-                </div>
-                <p class="result" id="flag-result" role="status"></p>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- ─── level 07: contact ────────────────────── -->
+<!-- ─── level 06: contact ────────────────────── -->
 <section class="level" id="contact">
     <div class="wrap">
         <div class="lvl-head">
-            <span class="lvl-no">LEVEL 07</span>
+            <span class="lvl-no">LEVEL 06</span>
             <h2 data-decrypt>contact</h2>
             <span class="lvl-state"><i class="fas fa-lock"></i> <em>LOCKED</em></span>
         </div>
@@ -351,7 +306,7 @@
                     <label>email<input type="email" name="email" placeholder="you@company.com" required></label>
                 </div>
                 <label>subject<input type="text" name="subject" placeholder="what's this about?" required></label>
-                <label>message<textarea name="message" rows="5" placeholder="type your message... (found the flag? paste it here!)" required></textarea></label>
+                <label>message<textarea name="message" rows="5" placeholder="type your message..." required></textarea></label>
                 <button type="submit" class="btn btn-p"><i class="fas fa-paper-plane"></i> Send message</button>
             </form>
         </div>
@@ -364,7 +319,6 @@
     <div class="wrap">
         <p class="ftr-line"><span class="g">root@nisrina:~#</span> logout</p>
         <p class="ftr-copy">&copy; 2025 Nisrina Masyitah Mohd Nor Zaidi · Connection to nisrina closed.</p>
-        <p class="secret" title="">flag fragment [3/3]: _w1th_l0v3}</p>
     </div>
 </footer>
 

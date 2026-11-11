@@ -116,7 +116,7 @@ img { display: block; max-width: 100%; }
 .hp-top, .hp-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: var(--muted); }
 .hp-top { padding: 0 2px 10px; }
 .hp-bottom { padding: 10px 2px 0; justify-content: flex-start; color: var(--text-2); letter-spacing: .3px; }
-.hp-bottom i { color: var(--y); }
+.hp-bottom i { color: var(--g); }
 .hp-bottom a { color: var(--g); text-decoration: underline; }
 .hp-live { color: var(--g); display: inline-flex; align-items: center; gap: 6px; }
 .hp-live i { width: 7px; height: 7px; border-radius: 50%; background: var(--g); box-shadow: 0 0 8px var(--g); animation: blink 1.4s steps(1) infinite; }
