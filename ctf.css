@@ -206,6 +206,7 @@ img { display: block; max-width: 100%; }
 /* projects */
 .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .projects .pj-img { height: 230px; }
+.projects > .proj:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 11px); }
 .proj { border: 1px solid var(--line); background: var(--card); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .25s, transform .25s, box-shadow .25s; }
 .proj:hover { border-color: var(--g); transform: translateY(-5px); box-shadow: 0 0 30px rgba(74,246,38,.1); }
 .pj-img { height: 170px; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -311,6 +312,7 @@ details b { color: var(--text); }
     .card .date { grid-column: 2; }
     .scan-head, .sk { grid-template-columns: 1fr 56px 70px 40px; gap: 8px; }
     .projects { grid-template-columns: 1fr; }
+    .projects > .proj:last-child:nth-child(odd) { width: auto; justify-self: stretch; }
     .row2 { grid-template-columns: 1fr; }
     .submit-row { flex-direction: column; }
     .submit-row .btn { justify-content: center; }
