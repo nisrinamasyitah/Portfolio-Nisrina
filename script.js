@@ -1,3 +1,9 @@
+// On refresh, always start at the top of the home page
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+window.scrollTo(0, 0);
+window.addEventListener('load', function(){ window.scrollTo(0, 0); });
+
 $(document).ready(function(){
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -80,7 +86,7 @@ $(document).ready(function(){
                 ctx.font = size + 'px JetBrains Mono, monospace';
                 for (var i = 0; i < drops.length; i++) {
                     var ch = chars[Math.floor(Math.random() * chars.length)];
-                    ctx.fillStyle = Math.random() > 0.97 ? '#00b4ff' : '#00e5a0';
+                    ctx.fillStyle = Math.random() > 0.97 ? '#9dff8a' : '#4af626';
                     ctx.fillText(ch, i * size, drops[i] * size);
                     if (drops[i] * size > canvas.height && Math.random() > 0.975) drops[i] = 0;
                     drops[i]++;
