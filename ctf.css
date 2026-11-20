@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Bodoni+Moda:opsz,wght@6..96,700&family=Pinyon+Script&display=swap');
 
 :root {
     --bg:     #030504;
@@ -232,7 +232,13 @@ a.proj:hover .pj-url { text-decoration: underline; }
 /* business */
 .biz { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: start; }
 .biz-img { position: relative; border: 1px solid var(--line-2); padding: 10px; background: var(--card); }
-.biz-img img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.biz-img { display: block; transition: border-color .2s; }
+.biz-img:hover { border-color: var(--g); }
+.nm-logo { aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 35%, #7a2d39 0%, #4a1a22 60%, #2a0e13 100%); color: #f6f0e6; text-align: center; }
+.nm-mono { width: 58px; height: 58px; border: 1px solid rgba(246,240,230,.55); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 26px; }
+.nm-word { font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 700; font-size: 34px; letter-spacing: .38em; margin-right: -.38em; line-height: 1; }
+.nm-script { font-family: 'Pinyon Script', cursive; font-size: 30px; margin-top: 2px; line-height: 1.2; }
+.nm-est { font-family: var(--mono); font-size: 10px; letter-spacing: .25em; color: rgba(246,240,230,.6); margin-top: 26px; }
 .biz-cap { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 8px; }
 .biz-body .cmd { margin-bottom: 14px; }
 .biz-kicker { font-family: var(--mono); font-size: 12px; color: var(--g); text-transform: uppercase; letter-spacing: .12em; }
