@@ -71,7 +71,7 @@ window.scrollTo(0, 0);
     function startRole() {
         if (roleStarted) return;
         roleStarted = true;
-        var roles = ['Cybersecurity Undergraduate', 'Full-Stack Developer', 'Security Enthusiast', 'Web Developer', 'Software Engineer'];
+        var roles = ['Founder & Entrepreneur', 'Cybersecurity Undergraduate', 'Full-Stack Developer', 'Security Enthusiast', 'Web Developer'];
         var el = document.getElementById('role');
         if (reduce) { el.textContent = roles[0]; return; }
         var r = 0, i = 0, del = false;

@@ -160,7 +160,7 @@ img { display: block; max-width: 100%; }
 .ab-photo:hover img { filter: none; }
 .tagline { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 8px; }
 .ab-text p { color: var(--text-2); font-size: 15px; line-height: 1.8; margin-bottom: 14px; }
-.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+.facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
 .facts div { border: 1px solid var(--line); background: var(--card); padding: 12px 14px; border-radius: 4px; }
 .facts span { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 .facts b { font-size: 13.5px; font-weight: 600; }
