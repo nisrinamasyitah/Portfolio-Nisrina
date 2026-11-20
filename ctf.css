@@ -229,6 +229,33 @@ a.proj:hover .pj-url { text-decoration: underline; }
 .pj-sub { font-size: 13px; color: var(--g); margin-bottom: 10px; }
 .pj-body > p:not(.pj-path):not(.pj-sub) { font-size: 14px; color: var(--text-2); margin-bottom: 14px; flex: 1; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+/* business */
+.biz { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: start; }
+.biz-img { position: relative; border: 1px solid var(--line-2); padding: 10px; background: var(--card); }
+.biz-img img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.biz-cap { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 8px; }
+.biz-body .cmd { margin-bottom: 14px; }
+.biz-kicker { font-family: var(--mono); font-size: 12px; color: var(--g); text-transform: uppercase; letter-spacing: .12em; }
+.biz-name { font-size: clamp(26px, 4vw, 36px); line-height: 1.15; margin: 6px 0 8px; }
+.biz-owner { font-family: var(--mono); font-size: 13px; color: var(--text-2); margin-bottom: 14px; }
+.biz-owner i { color: var(--g); margin-right: 4px; }
+.biz-owner b { color: var(--text); font-weight: 600; }
+.biz-lead { color: var(--text-2); font-size: 15px; line-height: 1.75; margin-bottom: 20px; }
+.biz-lead b { color: var(--text); font-weight: 600; }
+.biz-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 22px; }
+.biz-stats div { border: 1px solid var(--line); background: var(--card); padding: 12px 14px; border-radius: 4px; }
+.biz-stats b { display: block; font-family: var(--mono); font-size: 20px; color: var(--g); }
+.biz-stats span { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.biz-sub { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.biz-roles { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 20px; margin-bottom: 6px; }
+.biz-roles li { color: var(--text-2); font-size: 14.5px; }
+.biz-roles i { color: var(--g); width: 20px; }
+@media (max-width: 900px) {
+    .biz { grid-template-columns: 1fr; gap: 24px; }
+    .biz-img { max-width: 340px; }
+    .biz-stats { grid-template-columns: repeat(2, 1fr); }
+    .biz-roles { grid-template-columns: 1fr; }
+}
 .more-skills { margin: -8px 0 22px; }
 .tags span { font-family: var(--mono); font-size: 11px; color: var(--text-2); border: 1px solid var(--line-2); padding: 2px 8px; border-radius: 3px; }
 
