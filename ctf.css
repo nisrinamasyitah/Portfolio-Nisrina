@@ -229,6 +229,7 @@ a.proj:hover .pj-url { text-decoration: underline; }
 .pj-sub { font-size: 13px; color: var(--g); margin-bottom: 10px; }
 .pj-body > p:not(.pj-path):not(.pj-sub) { font-size: 14px; color: var(--text-2); margin-bottom: 14px; flex: 1; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.more-skills { margin: -8px 0 22px; }
 .tags span { font-family: var(--mono); font-size: 11px; color: var(--text-2); border: 1px solid var(--line-2); padding: 2px 8px; border-radius: 3px; }
 
 /* ctf */
